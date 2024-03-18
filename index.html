@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Saiko Ruleta</title>
   <meta name="description" content="Una ruleta sin trucos, 100% aleatoria, ya que he visto muchas trucadas y ya me canse que siempre salga entre el 15 y el 18" />
-  <link rel="shortcut icon" href="../public/saikologo.ico" type="image/x-icon" />
-  <link href="./output.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="public/saikologo.ico" type="image/x-icon" />
+  <link href="output.css" rel="stylesheet" />
 
   
   <style>
@@ -37,23 +37,11 @@
   
   /* Resto de tus estilos... */
 /* Estilos para dispositivos más pequeños (menores a 600px de ancho) */
-  @media only screen and (max-width: 599px) {
-    /* Oculta las imágenes en dispositivos móviles */
-    .imagesContainer,
-    .imagesContainer2 {
-      display: none;
-    }
-
-    /* Ajusta el ancho de los contenedores a 100% */
-    .carousel,
-    .carousel2 {
-      width: 100%;
-    }
-
+  @media only screen and (max-width: 800px) {
     /* Reduce el tamaño del canvas en dispositivos móviles */
     #canvas {
-      width: 300px; /* Puedes ajustar este valor según tus necesidades */
-      height: 300px; /* Puedes ajustar este valor según tus necesidades */
+      width: 400px; /* Puedes ajustar este valor según tus necesidades */
+      height: 400px; /* Puedes ajustar este valor según tus necesidades */
     }
 
     #updateButton,
@@ -65,6 +53,26 @@
     }
 }
 
+@media only screen and (max-width: 1080px) {
+/* Oculta las imágenes en dispositivos móviles */
+.imagesContainer,
+    .imagesContainer2 {
+      display: none;
+    }
+
+    #personaje{
+      display: none;
+    }
+
+    /* Ajusta el ancho de los contenedores a 100% */
+    .carousel,
+    .carousel2 {
+      width: 100%;
+    }
+
+  
+}
+
 
   
   </style>
@@ -72,9 +80,7 @@
 </head>
 <body>
   <h1 class="text-center text-3xl py-2 pt-3 font-bold text-purple-900">SAIKO RULETA</h1>
-  <img src="public/taniaConejitastick1.webp" 
-  class="absolute z-10 w-72 h-auto right-[337px]"
-  alt="stick1">
+  
 
   <div class="flex justify-between items-center mx-4">
     <div class="w-1/4 text-center bg-green-200">
@@ -97,8 +103,13 @@
           id="canvas"
           width="500"
           height="500"
-          class="border border-solid border-gray-300 shadow-md rounded-lg"
+          class="relative border border-solid border-gray-300 shadow-md rounded-lg"
         ></canvas>
+
+        <img src="public/taniaConejitastick1.webp" 
+        id="personaje"
+        class="absolute z-10 w-[270px] h-auto ml-[410px]"
+        alt="stick1">
 
         <div class="flex mt-1 md:mx-1 place-items-center flex-wrap">
           <label for="numOptions"></label>

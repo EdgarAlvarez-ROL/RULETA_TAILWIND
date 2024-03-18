@@ -556,6 +556,10 @@ video {
   right: 337px;
 }
 
+.right-12 {
+  right: 3rem;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -587,6 +591,38 @@ video {
 
 .mt-1 {
   margin-top: 0.25rem;
+}
+
+.ml-10 {
+  margin-left: 2.5rem;
+}
+
+.mr-28 {
+  margin-right: 7rem;
+}
+
+.ml-24 {
+  margin-left: 6rem;
+}
+
+.ml-80 {
+  margin-left: 20rem;
+}
+
+.ml-96 {
+  margin-left: 24rem;
+}
+
+.ml-\[400\] {
+  margin-left: 400;
+}
+
+.ml-\[400px\] {
+  margin-left: 400px;
+}
+
+.ml-\[410px\] {
+  margin-left: 410px;
 }
 
 .box-border {
@@ -631,6 +667,18 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-64 {
+  width: 16rem;
+}
+
+.w-\[272px\] {
+  width: 272px;
+}
+
+.w-\[270px\] {
+  width: 270px;
 }
 
 .max-w-full {
@@ -699,19 +747,14 @@ video {
   border-color: rgb(21 128 61 / var(--tw-border-opacity));
 }
 
-.border-orange-900 {
+.border-pink-900 {
   --tw-border-opacity: 1;
-  border-color: rgb(124 45 18 / var(--tw-border-opacity));
+  border-color: rgb(131 24 67 / var(--tw-border-opacity));
 }
 
 .border-purple-950 {
   --tw-border-opacity: 1;
   border-color: rgb(59 7 100 / var(--tw-border-opacity));
-}
-
-.border-pink-900 {
-  --tw-border-opacity: 1;
-  border-color: rgb(131 24 67 / var(--tw-border-opacity));
 }
 
 .bg-blue-200 {
@@ -728,14 +771,9 @@ video {
   background-color: transparent;
 }
 
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+.px-14 {
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
 }
 
 .px-8 {
@@ -743,24 +781,9 @@ video {
   padding-right: 2rem;
 }
 
-.px-12 {
-  padding-left: 3rem;
-  padding-right: 3rem;
-}
-
-.px-36 {
-  padding-left: 9rem;
-  padding-right: 9rem;
-}
-
-.px-10 {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-}
-
-.px-14 {
-  padding-left: 3.5rem;
-  padding-right: 3.5rem;
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .pl-2 {
@@ -789,24 +812,14 @@ video {
   color: rgb(21 128 61 / var(--tw-text-opacity));
 }
 
-.text-orange-900 {
-  --tw-text-opacity: 1;
-  color: rgb(124 45 18 / var(--tw-text-opacity));
-}
-
-.text-purple-900 {
-  --tw-text-opacity: 1;
-  color: rgb(88 28 135 / var(--tw-text-opacity));
-}
-
 .text-pink-900 {
   --tw-text-opacity: 1;
   color: rgb(131 24 67 / var(--tw-text-opacity));
 }
 
-.text-purple-800 {
+.text-purple-900 {
   --tw-text-opacity: 1;
-  color: rgb(107 33 168 / var(--tw-text-opacity));
+  color: rgb(88 28 135 / var(--tw-text-opacity));
 }
 
 .shadow-md {
@@ -853,29 +866,19 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.hover\:border-pink-900:hover {
-  --tw-border-opacity: 1;
-  border-color: rgb(131 24 67 / var(--tw-border-opacity));
-}
-
 .hover\:bg-green-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(21 128 61 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-orange-900:hover {
+.hover\:bg-pink-900:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(124 45 18 / var(--tw-bg-opacity));
+  background-color: rgb(131 24 67 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-purple-950:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(59 7 100 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-pink-900:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(131 24 67 / var(--tw-bg-opacity));
 }
 
 .hover\:text-white:hover {
@@ -894,18 +897,13 @@ video {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
-.hover\:shadow-orange-900\/50:hover {
-  --tw-shadow-color: rgb(124 45 18 / 0.5);
+.hover\:shadow-pink-900\/50:hover {
+  --tw-shadow-color: rgb(131 24 67 / 0.5);
   --tw-shadow: var(--tw-shadow-colored);
 }
 
 .hover\:shadow-purple-800\/50:hover {
   --tw-shadow-color: rgb(107 33 168 / 0.5);
-  --tw-shadow: var(--tw-shadow-colored);
-}
-
-.hover\:shadow-pink-900\/50:hover {
-  --tw-shadow-color: rgb(131 24 67 / 0.5);
   --tw-shadow: var(--tw-shadow-colored);
 }
 
@@ -921,16 +919,6 @@ video {
 }
 
 @media (min-width: 768px) {
-  .md\:mx-9 {
-    margin-left: 2.25rem;
-    margin-right: 2.25rem;
-  }
-
-  .md\:mx-0 {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-
   .md\:mx-1 {
     margin-left: 0.25rem;
     margin-right: 0.25rem;
