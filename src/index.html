@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saiko Ruleta</title>
+  <meta name="description" content="Una ruleta sin trucos, 100% aleatoria, ya que he visto muchas trucadas y ya me canse que siempre salga entre el 15 y el 18" />
+  <link rel="shortcut icon" href="../public/saikologo.ico" type="image/x-icon" />
+  <link href="./output.css" rel="stylesheet" />
+
+  
+  <style>
+    /* Estilos para el contenedor de imágenes */
+.imagesContainer {
+    width: 210px;
+    height: auto;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative; /* Asegura que el botón de "Ver Info Extra" y otras posiciones se ajusten correctamente */
+  }
+  
+  /* Estilos para el carrusel */
+  .carousel {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    width: 100%; /* Ajusta según sea necesario */
+    box-sizing: border-box; /* Evita que el padding afecte el ancho total */
+  }
+  
+  /* Estilos para las imágenes del carrusel */
+  .carousel-image {
+    flex: 0 0 100%; /* Cada imagen ocupa el 100% del ancho del carrusel */
+    max-width: 100%; /* Evita que las imágenes sean más grandes que el contenedor */
+    height: auto;
+    box-sizing: border-box; /* Evita que el padding afecte la altura total */
+  }
+  
+  /* Resto de tus estilos... */
+/* Estilos para dispositivos más pequeños (menores a 600px de ancho) */
+  @media only screen and (max-width: 599px) {
+    /* Oculta las imágenes en dispositivos móviles */
+    .imagesContainer,
+    .imagesContainer2 {
+      display: none;
+    }
+
+    /* Ajusta el ancho de los contenedores a 100% */
+    .carousel,
+    .carousel2 {
+      width: 100%;
+    }
+
+    /* Reduce el tamaño del canvas en dispositivos móviles */
+    #canvas {
+      width: 300px; /* Puedes ajustar este valor según tus necesidades */
+      height: 300px; /* Puedes ajustar este valor según tus necesidades */
+    }
+
+    #updateButton,
+    #numOptions,
+    #spin {
+      font-size: 12px; /* Reducir el tamaño de la fuente */
+      padding: 4px 10px; /* Reducir el relleno */
+      margin: 0; /* Eliminar los márgenes */
+    }
+}
+
+
+  
+  </style>
+ 
+</head>
+<body>
+  <h1 class="text-center text-3xl py-2 pt-3 font-bold text-purple-900">SAIKO RULETA</h1>
+  <img src="public/taniaConejitastick1.webp" 
+  class="absolute z-10 w-72 h-auto right-[337px]"
+  alt="stick1">
+
+  <div class="flex justify-between items-center mx-4">
+    <div class="w-1/4 text-center bg-green-200">
+      <!-- Carrusel de Imágenes -->
+      <div class="imagesContainer w-[210px] h-auto max-w-full justify-center overflow-hidden relative ml-12">
+        <div class="carousel flex transition-transform duration-1000 ease-in-out w-full box-border">
+          <img src="public/ima1.png" alt="Imagen a la izquierda" class="carousel-image flex-0 flex-grow-0 w-full max-w-full h-auto box-border">
+          <img src="public/ima1.png" alt="Imagen a la izquierda" class="carousel-image flex-0 flex-grow-0 w-full max-w-full h-auto box-border">
+          <img src="public/ima1.png" alt="Imagen a la izquierda" class="carousel-image flex-0 flex-grow-0 w-full max-w-full h-auto box-border">
+          <img src="public/tania.jpg" alt="Imagen a la izquierda" class="carousel-image flex-0 flex-grow-0 w-full max-w-full h-auto box-border">
+        </div>
+      </div>
+    
+    </div>
+    
+    <div class="w-1/2 text-center bg-blue-200">
+      <!-- Contenido del objeto central -->
+      <div class="grid place-items-center m-0">
+        <canvas
+          id="canvas"
+          width="500"
+          height="500"
+          class="border border-solid border-gray-300 shadow-md rounded-lg"
+        ></canvas>
+
+        <div class="flex mt-1 md:mx-1 place-items-center flex-wrap">
+          <label for="numOptions"></label>
+          <input
+            type="number"
+            id="numOptions"
+            min="2"
+            max="44"
+            value="20"
+            class="py-2 m-1 ml-auto pl-2 border-2 font-bold text-pink-900 border-pink-900 rounded-xl bg-transparent transition-all hover:bg-pink-900 hover:text-white hover:shadow-lg hover:shadow-pink-900/50 hover:-translate-y-0.5"
+          />
+          <button
+            id="updateButton"
+            class="border-2 ml-auto border-purple-950 font-bold text-purple-900 hover:bg-purple-950 hover:text-white hover:-translate-y-0.5 hover:shadow-lg hover:shadow-purple-800/50 transition-all rounded-xl py-2 px-8 active:shadow-none active:translate-y-0"
+          >
+            Actualizar Ruleta
+          </button>
+          <button
+            id="spin"
+            class="border-2 m-1 mr-auto border-green-700 font-bold text-green-700 hover:bg-green-700 hover:text-white hover:-translate-y-0.5 hover:shadow-lg hover:shadow-green-700/50 transition-all rounded-xl py-2 px-14 active:shadow-none active:translate-y-0"
+          >
+            GIRAR Ruleta
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-1/4 text-center bg-green-200">
+      <!-- Carrusel de Imágenes -->
+      <div class="imagesContainer2 w-[210px] h-auto max-w-full justify-center overflow-hidden relative ml-12">
+        <div class="carousel2 flex transition-transform duration-1000 ease-in-out w-full box-border">
+          <img src="public/ima1.png" alt="Imagen a la izquierda" class="carousel-image2 flex-0 flex-grow-0 w-full max-w-full h-auto box-border">
+          <img src="public/ima1.png" alt="Imagen a la izquierda" class="carousel-image2 flex-0 flex-grow-0 w-full max-w-full h-auto box-border">
+          <img src="public/ima1.png" alt="Imagen a la izquierda" class="carousel-image2 flex-0 flex-grow-0 w-full max-w-full h-auto box-border">
+          <img src="public/ima4.png" alt="Imagen a la izquierda" class="carousel-image2 flex-0 flex-grow-0 w-full max-w-full h-auto box-border">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <script src="js/script.js"></script>
+  <script src="js/carrusel.js"></script>
+  <script src="js/carrusel copy.js"></script>
+
+
+</body>
+</html>
