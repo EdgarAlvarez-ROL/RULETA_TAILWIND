@@ -37,7 +37,7 @@
   
   /* Resto de tus estilos... */
 /* Estilos para dispositivos más pequeños (menores a 600px de ancho) */
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 1080px) {
     /* Reduce el tamaño del canvas en dispositivos móviles */
     #canvas {
       width: 400px; /* Puedes ajustar este valor según tus necesidades */
@@ -53,25 +53,7 @@
     }
 }
 
-@media only screen and (max-width: 1080px) {
-/* Oculta las imágenes en dispositivos móviles */
-.imagesContainer,
-    .imagesContainer2 {
-      display: none;
-    }
 
-    #personaje{
-      display: none;
-    }
-
-    /* Ajusta el ancho de los contenedores a 100% */
-    .carousel,
-    .carousel2 {
-      width: 100%;
-    }
-
-  
-}
 
 
   
@@ -83,7 +65,7 @@
   
 
   <div class="flex justify-between items-center mx-4">
-    <div class="w-1/4 text-center bg-green-200">
+    <div class="w-1/4 text-center bg-green-200 hidden sm:block">
       <!-- Carrusel de Imágenes -->
       <div class="imagesContainer w-[210px] h-auto max-w-full justify-center overflow-hidden relative ml-12">
         <div class="carousel flex transition-transform duration-1000 ease-in-out w-full box-border">
@@ -96,7 +78,7 @@
     
     </div>
     
-    <div class="w-1/2 text-center bg-blue-200">
+    <div class="w-full md:w-1/2 text-center bg-blue-200">
       <!-- Contenido del objeto central -->
       <div class="grid place-items-center m-0">
         <canvas
@@ -108,7 +90,7 @@
 
         <img src="public/taniaConejitastick1.webp" 
         id="personaje"
-        class="absolute z-10 w-[270px] h-auto ml-[410px]"
+        class="hidden md:block z-10 w-[270px] h-auto ml-[410px] absolute"
         alt="stick1">
 
         <div class="flex mt-1 md:mx-1 place-items-center flex-wrap">
@@ -137,7 +119,7 @@
       </div>
     </div>
 
-    <div class="w-1/4 text-center bg-green-200">
+    <div class="w-1/4 text-center bg-green-200 hidden md:block">
       <!-- Carrusel de Imágenes -->
       <div class="imagesContainer2 w-[210px] h-auto max-w-full justify-center overflow-hidden relative ml-12">
         <div class="carousel2 flex transition-transform duration-1000 ease-in-out w-full box-border">
